@@ -31,17 +31,11 @@ async function PutCall() {
     .catch((e) => console.log(e));
 }
 
-async function PatchCall() {
+async function PatchCall(id,prod) {
   return await axios({
     method: "PATCH",
-    url: url + "/7",
-    body: JSON.stringify({
-      title: "test product",
-      price: 15,
-      description: "lorem ipsum set",
-      image: "https://i.pravatar.cc",
-      category: "electronic",
-    }),
+    url: 'https://fakestoreapi.com/products/'+id,
+    body: JSON.stringify(prod)
   })
     .then((res) => {
       return res.data;

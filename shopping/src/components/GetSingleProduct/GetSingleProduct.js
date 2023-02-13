@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { GetSingleCall, DeleteCall } from "../../Backend/APICalls";
+import { GetSingleCall, DeleteCall } from "../../Backend/API/APICalls";
 import { useLocation,useNavigate } from "react-router-dom";
 import "./styles/GetSingleProduct.css";
 
@@ -21,8 +21,8 @@ function GetSingleProduct() {
     return console.log(result);
   };
   const navigateTo=useNavigate();
-  function handleOnClick() {
-    return navigateTo("/UpdateProduct");
+  function handleOnClick(id) {
+    return navigateTo("/UpdateProduct", { state: { id: id } });
   }
 
   return (
@@ -47,7 +47,7 @@ function GetSingleProduct() {
             <button
               className="updatebtn"
               onClick={() => {
-                handleOnClick();
+                handleOnClick(data.id);
               }}
             >
               Update
