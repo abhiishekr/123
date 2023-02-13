@@ -17,7 +17,7 @@ function GetProduct() {
     setProducts(products);
   };
   const GotoSingleProd = (id) => {
-    return navigateTo("/product", { state: { id: id } });
+    return navigateTo("/product", { state: { id: id },title:"title" });
   };
 
   return (
@@ -31,7 +31,6 @@ function GetProduct() {
             key={product.id}
             className="cart"
           >
-            {" "}
             <div>
               <img src={product.image} width="250px" alt="#" />
             </div>

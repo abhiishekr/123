@@ -5,7 +5,7 @@ import "./styles/footer.css"
 const Footer = () => {
   return (
     <div className='footer'>
-        <p>Shoppo</p>
+        <p>SHOPPO</p>
     </div>
   )
 }

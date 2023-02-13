@@ -5,6 +5,8 @@ import "./styles/GetSingleProduct.css";
 
 function GetSingleProduct() {
   const { state } = useLocation();
+  
+
   const { id } = state;
   const [data, setData] = useState({});
   useEffect(() => {

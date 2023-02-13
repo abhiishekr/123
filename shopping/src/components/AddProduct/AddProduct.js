@@ -5,7 +5,7 @@ import "./styles/AddProduct.css";
 
 function AddProduct() {
   const [data, setData] = useState({});
-  const { register, handleSubmit,reset } = useForm();
+  const { register, handleSubmit } = useForm();
   
   const handleRegistration = (data) => {
     setData(data);

@@ -1,64 +1,70 @@
-import React, { useState } from 'react'
-import { PatchCall } from "../../Backend/API/APICalls"
+import React, { useState } from "react";
+import { PatchCall } from "../../Backend/API/APICalls";
 import { useForm } from "react-hook-form";
-import { useLocation } from 'react-router-dom';
+import { useLocation } from "react-router-dom";
 
 function UpdateProduct() {
-  const {state}=useLocation();
-  const {id}=state
+  const { state } = useLocation();
+  const { id } = state;
   const [data, setData] = useState({});
   const { register, handleSubmit } = useForm();
   const handleRegistration = (data) => {
-    setData(data);
-    getData(data);
+      setData(data);
+      getData(data);
   };
 
   async function getData(data) {
-    const temp = await PatchCall(id,data);
+    const temp = await PatchCall(id, data);
     return setData(temp);
-    
   }
-  console.log(id)
+  console.log(id);
 
   return (
     <div>
       <div className="form">
         <form onSubmit={handleSubmit(handleRegistration)}>
-          <input className="prod-name"
+          <input
+            className="prod-name"
             type="text"
             label="product-name"
             placeholder="title"
             {...register("title")}
           />
-          <input className="prod-price"
+          <input
+            className="prod-price"
             type="text"
             label="price"
             placeholder="price"
             {...register("price")}
           />
-          <input className="prod-description"
+          <input
+            className="prod-description"
             type="text"
             label="Description"
             placeholder="description"
             {...register("description")}
           />
-          <input className="prod-image"
+          <input
+            className="prod-image"
             type="text"
             label="image"
             placeholder="image"
             {...register("image")}
           />
-          <input className="prod-category"
+          <input
+            className="prod-category"
             type="text"
             label="category"
             placeholder="category"
             {...register("category")}
           />
-          <button className="submitbtn" type="submit">Submit</button>
+          <button className="submitbtn" type="submit">
+            Submit
+          </button>
         </form>
       </div>
     </div>
-  )
+  );
 }
 
-export default UpdateProduct
+export default UpdateProduct;

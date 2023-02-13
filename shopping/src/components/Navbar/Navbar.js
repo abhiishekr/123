@@ -1,6 +1,7 @@
 import React from "react";
 import "./styles/Navbar.css";
 import { useNavigate } from "react-router-dom";
+import {PlusIcon} from "@heroicons/react/24/outline"
 
 
 const Navbar = () => {
@@ -12,14 +13,14 @@ const Navbar = () => {
   return (
     <div>
       <div className="navbar">
-        <p>Shoppo</p>
-        <button className="addbtn"
+        <p>SHOPPO</p>
+        <PlusIcon className="addbtn"
           onClick={() => {
             handleOnClick();
           }}
         >
           Add Item
-        </button>
+        </PlusIcon>
       </div>
     </div>
   );
