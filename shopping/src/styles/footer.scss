@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
+.footer{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Cedarville Cursive', cursive;
+    border-top: 3px solid gray;
+    color: white;
+    background-color: black;
+    font-size: larger;
+    position: fixed;
+    bottom:0;
+    left:0;
+    width: 100vw;
+}

@@ -1,0 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap");
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Cedarville Cursive", cursive;
+  border-bottom: 3px solid gray;
+  font-size: 50px;
+}/*# sourceMappingURL=Navbar.css.map */

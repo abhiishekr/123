@@ -1,11 +1,25 @@
-import React from 'react'
+import React from "react";
+import "../styles/Navbar.css";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
-  return (
-    <div className='navbar'>
-        <h1>Shopping App</h1>    
-    </div>
-  )
-}
+  const navigateTo = useNavigate();
+  function handleOnClick() {
+    return (console.log("button"));
+  }
 
-export default Navbar
+  return (
+    <div>
+      <div className="navbar">
+        <p>Shoppo</p>
+        <button className="addbtn"
+          onClick={() =>{return (handleOnClick)}}
+        >
+          Add Item
+        </button>
+      </div>
+    </div>
+  );
+};
+
+export default Navbar;
