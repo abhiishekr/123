@@ -6,4 +6,18 @@
   font-family: "Cedarville Cursive", cursive;
   border-bottom: 3px solid gray;
   font-size: 50px;
+}
+
+.addbtn {
+  margin-top: 10%;
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 10px 12px;
+  background-color: rgb(173, 173, 173);
+}
+.addbtn:hover {
+  cursor: pointer;
+  scale: 101%;
+  transition: ease-in-out;
+  transition-duration: 550ms;
 }/*# sourceMappingURL=Navbar.css.map */

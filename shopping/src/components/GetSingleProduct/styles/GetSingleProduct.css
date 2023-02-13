@@ -57,6 +57,12 @@
   position: relative;
   left: -150%;
 }
+.deletebtn:hover {
+  cursor: pointer;
+  scale: 101%;
+  transition: ease-in-out;
+  transition-duration: 550ms;
+}
 
 .updatebtn {
   border-radius: 8px;
@@ -66,4 +72,10 @@
   background-color: rgb(173, 173, 173);
   position: relative;
   right: -150%;
+}
+.updatebtn:hover {
+  cursor: pointer;
+  scale: 101%;
+  transition: ease-in-out;
+  transition-duration: 550ms;
 }/*# sourceMappingURL=GetSingleProduct.css.map */

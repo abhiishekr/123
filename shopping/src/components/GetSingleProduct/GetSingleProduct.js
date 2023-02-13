@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { GetSingleCall, DeleteCall } from "../Backend/APICalls";
-import { useLocation } from "react-router-dom";
-import "../styles/GetSingleProduct.css";
+import { GetSingleCall, DeleteCall } from "../../Backend/APICalls";
+import { useLocation,useNavigate } from "react-router-dom";
+import "./styles/GetSingleProduct.css";
 
 function GetSingleProduct() {
   const { state } = useLocation();
@@ -20,15 +20,17 @@ function GetSingleProduct() {
     let result = await DeleteCall(id);
     return console.log(result);
   };
-
-  
+  const navigateTo=useNavigate();
+  function handleOnClick() {
+    return navigateTo("/UpdateProduct");
+  }
 
   return (
     <div className="parent">
       {
         <div className="container">
           <div>
-            <img src={data.image} className="img" />
+            <img src={data.image} className="img" alt="#"/>
           </div>
           <div className="title">{data.title}</div>
           <div className="price">${data.price}</div>
@@ -45,7 +47,7 @@ function GetSingleProduct() {
             <button
               className="updatebtn"
               onClick={() => {
-                deleteHandler(data.id);
+                handleOnClick();
               }}
             >
               Update

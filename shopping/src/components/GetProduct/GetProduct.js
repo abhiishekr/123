@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import "../styles/products.css";
-import { GetCall } from "../Backend/APICalls";
+import "./styles/products.css";
+import { GetCall } from "../../Backend/APICalls";
 import { useNavigate } from "react-router-dom";
 
 function GetProduct() {

@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from "react";
-import { PostCall } from "../Backend/APICalls";
-import { set, useForm } from "react-hook-form";
+import React, { useState } from "react";
+import { PostCall } from "../../Backend/APICalls";
+import { useForm } from "react-hook-form";
+import "./styles/AddProduct.css";
 
 function AddProduct() {
   const [data, setData] = useState({});
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit,reset } = useForm();
+  
   const handleRegistration = (data) => {
     setData(data);
     getData(data);
@@ -13,44 +15,45 @@ function AddProduct() {
   async function getData(data) {
     const temp = await PostCall(data);
     return setData(temp);
+    
   }
+  console.log(data)
 
   return (
     <div>
-      <div className="add-product">
-        Item data
+      <div className="form">
         <form onSubmit={handleSubmit(handleRegistration)}>
-          <input
+          <input className="prod-name"
             type="text"
             label="product-name"
             placeholder="title"
             {...register("title")}
           />
-          <input
+          <input className="prod-price"
             type="text"
             label="price"
             placeholder="price"
             {...register("price")}
           />
-          <input
+          <input className="prod-description"
             type="text"
             label="Description"
             placeholder="description"
             {...register("description")}
           />
-          <input
+          <input className="prod-image"
             type="text"
             label="image"
             placeholder="image"
             {...register("image")}
           />
-          <input
+          <input className="prod-category"
             type="text"
             label="category"
             placeholder="category"
             {...register("category")}
           />
-          <button type="submit">Submit</button>
+          <button className="submitbtn" type="submit">Submit</button>
         </form>
       </div>
     </div>

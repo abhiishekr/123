@@ -56,6 +56,12 @@
   background-color: rgb(173, 173, 173);
   position:relative;
   left: -150%;
+  &:hover{
+    cursor: pointer;
+    scale: 101%;
+    transition: ease-in-out;
+    transition-duration: 550ms;
+    }
   
 }
 .updatebtn{
@@ -66,5 +72,10 @@
   background-color: rgb(173, 173, 173);
   position: relative;
   right: -150%;
-
+  &:hover{
+    cursor: pointer;
+    scale: 101%;
+    transition: ease-in-out;
+    transition-duration: 550ms;
+    }
 }
