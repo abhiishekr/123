@@ -5,7 +5,8 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import GetSingleProduct from "./components/GetSingleProduct/GetSingleProduct";
 import AddProduct from "./components/AddProduct/AddProduct";
 import UpdateProduct from "./components/UpdateProduct/UpdateProduct";
-
+import Login from "./components/LoginRegister/Login/Login";
+import Register from "./components/LoginRegister/Register/Register"
 
 function App() {
   return (
@@ -18,6 +19,8 @@ function App() {
           <Route path="/product" element={<GetSingleProduct />} />
           <Route path="/AddProduct" element={<AddProduct />} />
           <Route path="/UpdateProduct" element={<UpdateProduct />} />
+          <Route path="/Login" element={<Login />} />
+          <Route path="/Register" element={<Register />} />
         </Routes>
         <Footer />
       </Router>

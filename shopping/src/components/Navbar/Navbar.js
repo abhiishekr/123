@@ -9,11 +9,20 @@ const Navbar = () => {
   function handleOnClick() {
     return navigateTo("/AddProduct");
   }
+  function loginHandler() {
+    return navigateTo("/Login");
+  }
+  function registerHandler() {
+    return navigateTo("/Register");
+  }
+
 
   return (
     <div>
       <div className="navbar">
         <p>SHOPPO</p>
+        <button className="loginbtn" onClick={()=>{loginHandler();}}>Login</button>
+        <button className="registerbtn" onClick={()=>{registerHandler();}}>Register</button>
         <PlusIcon className="addbtn"
           onClick={() => {
             handleOnClick();
