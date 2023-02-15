@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form';
 import "../Login/styles/Login.css"
 
 function Register() {
-  const { register, handleSubmit,formState:{errors} } = useForm();
+  const { register, handleSubmit } = useForm();
   
   const onSubmit = (data) => {
     console.log(data);

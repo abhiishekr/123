@@ -1,12 +1,21 @@
 import React from 'react'
 import { useForm } from 'react-hook-form';
+import { useDispatch } from 'react-redux';
+import { login } from '../../../features/userSlice';
 import "./styles/Login.css"
 
 function Login() {
-  const { register, handleSubmit,formState:{errors} } = useForm();
-  
+  const { register, handleSubmit} = useForm();
+  const dispatch=useDispatch();
+
   const onSubmit = (data) => {
     console.log(data);
+    dispatch(login({
+      email:data.email,
+      password:data.password,
+      loggedIn:true
+    }))
+
   };
     
   return (
